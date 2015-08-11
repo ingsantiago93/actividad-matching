@@ -12,29 +12,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    //Edge symbol: 'stage'
    (function(symbolName) {
       
-      
-      
-
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         
-         //$('#Stage_contenedor_padre').sortable();
-         //sym.$('contenedor_padre').sortable();
-         $('body').trigger({
-            type: 'enviar',
-            sym: sym
-         });         
+         ed_send_data(sym);
       });
       //Edge binding end
 
-      
-
       Symbol.bindElementAction(compId, symbolName, "${btn_enviar}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón // aca va acciones del boton de enviar
-         $('body').trigger({
-            type: 'ed_check_list',
-            sym: sym,
-            evt: e
-         });  
+         EDGE_Recurso_Submit(sym);
+         /*$('body').trigger({
+            type: 'EDGE_Recurso_Submit',
+            sym: sym
+         });*/
       });
       //Edge binding end
 
