@@ -1,13 +1,3 @@
-/* Santiago Peñuela Arcila - 31/07/2015 
-Evento Trigger que se ejecuta en la línea de tiempo principal de "_edgeActions.js" bajo el nombre "enviar"
-Función: recibe "evt" - evento que se ejecuta en "_edgeActions.js".
-Llama, mediante ajax, el archivo html para incrustarlo en el símbolo dentro del Edge, pues se creó un archivo nuevo (html)
-que se encarga de tener todas las acciones ".sortable" de jQuery UI y parametrización del "config.json".
-Posteriormente, llama el "config.json" para poblar la lista "ul#list_sort" con las palabras al azar, modificadas para
-que no siempre se muestren en el órden correcto. Al finalizar, le da el evento jQuery UI "sortable", para que los
-elementos de la lista se pueda arrastrar y acomodar cuando se suelta en algún lugar de la lista misma, además 
-guarda el "config.json" dentro de el simbolo principal y la cantidad de intentos con la que inicia el usuario. */
-
 function EDGE_Recurso_Submit(sym)
 {
     $('body').trigger({
@@ -18,6 +8,11 @@ function EDGE_Recurso_Submit(sym)
 
 $('body').on('EDGE_Recurso_Submit', function(evt) {
     do_submit(evt.sym);
+});
+
+$('body').on('EDGE_Recurso_promiseCreated', function(evt) {
+
+    ed_send_data(evt.sym);
 });
 
 function do_submit(sym) {
@@ -58,7 +53,7 @@ function do_submit(sym) {
         sym: sym,
         identify: stage.prop("ed_identify")
     };
-    $('body').trigger(ed_obj_evt);
+    parent.$(parent.document).trigger(ed_obj_evt);
     return retorno_datos;
 
     /*$('body').trigger({
@@ -96,7 +91,7 @@ function ed_send_data(sym)
                 stage.prop('ed_json_property_object', json_content);
                 stage.prop('ed_user_attempts',json_content.attempts);
 
-                $('body').trigger({
+                parent.$(parent.document).trigger({
                     type: 'EDGE_Plantilla_creationComplete',
                     sym: sym,
                     identify: stage.prop("ed_identify")
@@ -109,7 +104,7 @@ function ed_send_data(sym)
 
 $('body').on("EDGE_Plantilla_creationComplete", function(evt) {
 
-    $('body').trigger({
+    /*$('body').trigger({
         type: "EDGE_Recurso_sendPreviousData",
         block: false,
         previous_data: ["palabra_x", "palabra_d", "palabra_c","palabra_b","palabra_a"],
@@ -117,7 +112,7 @@ $('body').on("EDGE_Plantilla_creationComplete", function(evt) {
         show_answers: false,
         sym: evt.sym,
         identify: {}
-    });
+    });*/
 });
 
 $('body').on('EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied', function(evt) {
