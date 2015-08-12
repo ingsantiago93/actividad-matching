@@ -44,8 +44,6 @@ function do_submit(sym) {
             retorno_datos.final_stage = "incorrect";
         }
     });
-    
-    console.log(retorno_datos);
 
     var ed_obj_evt = 
     {
@@ -56,12 +54,11 @@ function do_submit(sym) {
         results: retorno_datos.final_stage,
         position_which_is_right: retorno_datos.position_which_is_right,
         attempts: retorno_datos.attempts_to,
-        attempts_limit: retorno_datos.json_content.attempts,
+        attempts_limit: json_content.attempts,
         sym: sym,
         identify: stage.prop("ed_identify")
     };
     $('body').trigger(ed_obj_evt);
-
     return retorno_datos;
 
     /*$('body').trigger({
@@ -98,9 +95,16 @@ function ed_send_data(sym)
                 var stage = $(sym.getComposition().getStage().ele);
                 stage.prop('ed_json_property_object', json_content);
                 stage.prop('ed_user_attempts',json_content.attempts);
+
+                $('body').trigger({
+                    type: 'EDGE_Plantilla_creationComplete',
+                    sym: sym,
+                    identify: stage.prop("ed_identify")
+                });
             });
-        }
+        }        
     });
+      
 }
 
 $('body').on("EDGE_Plantilla_creationComplete", function(evt) {
@@ -108,8 +112,9 @@ $('body').on("EDGE_Plantilla_creationComplete", function(evt) {
     $('body').trigger({
         type: "EDGE_Recurso_sendPreviousData",
         block: false,
-        previous_data: ["value_2", "value_1_2", "ok"],
+        previous_data: ["palabra_x", "palabra_d", "palabra_c","palabra_b","palabra_a"],
         attempts: 2,
+        show_answers: false,
         sym: evt.sym,
         identify: {}
     });
@@ -119,11 +124,11 @@ $('body').on('EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied', fun
     var stage = $(evt.sym.getComposition().getStage().ele);
     var json_content = stage.prop('ed_json_property_object');
 
-    if (typeof(evt.previous_data) != "undefined") { // Falta respuestas del usuario.
-        //console.log(evt.previous_data);
-        /*for (var i = evt.previous_data.length - 1; i >= 0; i--) {
-            evt.sym.$('text_' + (i + 1)).find('select option[value=' + evt.previous_data[i] + ']').attr('selected', 'selected');
-        };*/
+    if (typeof(evt.previous_data) != "undefined") 
+    {
+        for (var i = evt.previous_data.length - 1; i >= 0; i--) {
+            $("ul#list_sort li:nth-child(" + (i + 1) + ")").html(evt.previous_data[i]);
+        };
     }
 
     if (evt.block) {
