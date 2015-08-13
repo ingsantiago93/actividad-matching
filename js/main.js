@@ -57,7 +57,6 @@ $('body').on("EDGE_Plantilla_creationComplete", function(evt)
 $('body').on('EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied', function(evt) {
     var stage = $(evt.sym.getComposition().getStage().ele);
     var json_content = stage.prop('ed_json_property_object');
-
     if (typeof(evt.previous_data) != "undefined") 
     {
         for (var i = evt.previous_data.length - 1; i >= 0; i--) {
@@ -72,7 +71,7 @@ $('body').on('EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied', fun
     }
 
     if (typeof(evt.attempts) != "undefined") {
-        stage.prop('ed_attempts', evt.attempts);
+        stage.prop('ed_user_attempts', evt.attempts);
     }
 
     if (evt.reset)
