@@ -1,21 +1,21 @@
 {
     "words": [
     {
-    	"word":"palabra_a"
+        "word":"palabra_a"
     },
     {
-    	"word":"palabra_b"
+        "word":"palabra_b"
     },
     {
-    	"word":"palabra_c"
+        "word":"palabra_c"
     },
     {
-    	"word":"palabra_d"
+        "word":"palabra_d"
     },
     {
-    	"word":"palabra_x"
+        "word":"palabra_x"
     }],
-	"attempts": 3,
+    "attempts": 3,
     "css_config": {
         "color": "#00FF00",
         "background-color": "green",

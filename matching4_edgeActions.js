@@ -20,10 +20,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindElementAction(compId, symbolName, "${btn_enviar}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón // aca va acciones del boton de enviar
          EDGE_Recurso_Submit(sym);
-         /*$('body').trigger({
-            type: 'EDGE_Recurso_Submit',
-            sym: sym
-         });*/
       });
       //Edge binding end
 

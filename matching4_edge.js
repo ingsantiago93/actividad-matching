@@ -18,7 +18,8 @@
         scripts = [
             js+"jquery-1.10.2.js",
             js+"jquery-ui-1.10.4.custom.js",
-            js+"jquery-ui-1.10.4.custom.min.js"
+            js+"jquery-ui-1.10.4.custom.min.js",
+            js+"main.js"
         ],
         symbols = {
             "stage": {
@@ -586,6 +587,4 @@
     AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
     if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("matching4_edgeActions.js");
-    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("js/jquery-ui-1.10.4.custom.js");
-    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("js/main.js");
 })("EDGE-18191759");
