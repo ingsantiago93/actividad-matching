@@ -42,7 +42,7 @@ function ed_send_data(sym)
 
 $('body').on("EDGE_Plantilla_creationComplete", function(evt)
 {
-    $('body').trigger({
+    /*$('body').trigger({
         type: "EDGE_Recurso_sendPreviousData",
         block: true,
         previous_data: "",
@@ -51,7 +51,7 @@ $('body').on("EDGE_Plantilla_creationComplete", function(evt)
         reset: true,
         sym: evt.sym,
         identify: {}
-    });
+    });*/
 });
 
 $('body').on('EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied', function(evt) {
