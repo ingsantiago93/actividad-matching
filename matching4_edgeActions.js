@@ -22,6 +22,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
+      Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
+         // Insertar código para ejecutarse cuando el símbolo se crea aquí
+         //ed_send_data(sym);
+      });
+      //Edge binding end
+
    })("stage");
    //Edge symbol end:'stage'
 

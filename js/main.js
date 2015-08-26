@@ -7,7 +7,6 @@ function ed_send_data(sym)
 {
     var position_array = [];
     var j, temp;
-
     $.ajax({
         url: "index.html",
         dataType: "text",
@@ -26,6 +25,10 @@ function ed_send_data(sym)
                     $("ul#list_sort li:nth-child(" + (i + 1) + ")", sym.$('contenedor_padre')).html(position_array[i]);
                 }
                 $("ul#list_sort", sym.$('contenedor_padre')).sortable();
+                $("ul#list_sort", sym.$('contenedor_padre')).on("sortchange",function(event, ui)
+                    {
+                        send_on_change(sym);
+                    });
                 var stage = $(sym.getComposition().getStage().ele);
                 stage.prop('ed_json_property_object', json_content);
                 stage.prop('ed_user_attempts',json_content.attempts);
@@ -38,6 +41,17 @@ function ed_send_data(sym)
             });
         }        
     });     
+}
+
+function send_on_change(sym)
+{
+    var stage = $(sym.getComposition().getStage().ele);
+    parent.$(parent.document).trigger(
+    {
+        type: "EDGE_Plantilla_on_change",
+        sym: sym,
+        identify: stage.prop("ed_identify")
+    });
 }
 
 $('body').on("EDGE_Plantilla_creationComplete", function(evt)

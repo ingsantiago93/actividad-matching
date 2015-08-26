@@ -127,25 +127,24 @@
                 content: {
                     dom: [
                         {
+                            rect: ['0px', '0px', '152px', '45px', 'auto', 'auto'],
                             id: 'opc1',
                             type: 'image',
-                            rect: ['0px', '0px', '152px', '45px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/etiqueta1.png', '0px', '0px']
                         },
                         {
-                            rect: ['17px', '7px', '98px', '28px', 'auto', 'auto'],
-                            textStyle: ['', '', '', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '700', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'Text3',
-                            text: '<p style=\"margin: 0px;\">​<span style=\"color: rgb(255, 255, 255);\">​Opcion 1</span></p>',
+                            type: 'text',
                             align: 'left',
-                            type: 'text'
+                            id: 'Text3',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​<span style=\"color: rgb(255, 255, 255);\">​Opcion 1</span></p>',
+                            rect: ['17px', '7px', '98px', '28px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '152px', '45px']
+                            rect: [null, null, '152px', '45px']
                         }
                     }
                 },
@@ -167,25 +166,24 @@
                 content: {
                     dom: [
                         {
+                            rect: ['0px', '0px', '152px', '45px', 'auto', 'auto'],
                             id: 'opc2',
                             type: 'image',
-                            rect: ['0px', '0px', '152px', '45px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/etiqueta1.png', '0px', '0px']
                         },
                         {
-                            rect: ['18px', '7px', '107px', '25px', 'auto', 'auto'],
-                            textStyle: ['', '', '', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(255,255,255,1.00)', '700', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'Text4',
-                            text: '<p style=\"margin: 0px;\">​Opcion 2</p>',
+                            type: 'text',
                             align: 'left',
-                            type: 'text'
+                            id: 'Text4',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​Opcion 2</p>',
+                            rect: ['18px', '7px', '107px', '25px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '152px', '45px']
+                            rect: [null, null, '152px', '45px']
                         }
                     }
                 },
@@ -207,25 +205,24 @@
                 content: {
                     dom: [
                         {
+                            rect: ['0px', '0px', '152px', '45px', 'auto', 'auto'],
                             id: 'opc3',
                             type: 'image',
-                            rect: ['0px', '0px', '152px', '45px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/etiqueta1.png', '0px', '0px']
                         },
                         {
-                            rect: ['19px', '8px', '101px', '27px', 'auto', 'auto'],
-                            textStyle: ['', '', '', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(255,255,255,1)', '700', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'Text5',
-                            text: '<p style=\"margin: 0px;\">​Opcion 3</p>',
+                            type: 'text',
                             align: 'left',
-                            type: 'text'
+                            id: 'Text5',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​Opcion 3</p>',
+                            rect: ['19px', '8px', '101px', '27px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '152px', '45px']
+                            rect: [null, null, '152px', '45px']
                         }
                     }
                 },
@@ -247,25 +244,24 @@
                 content: {
                     dom: [
                         {
+                            rect: ['0px', '0px', '152px', '45px', 'auto', 'auto'],
                             id: 'opc4',
                             type: 'image',
-                            rect: ['0px', '0px', '152px', '45px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/etiqueta1.png', '0px', '0px']
                         },
                         {
-                            rect: ['19px', '9px', '97px', '23px', 'auto', 'auto'],
-                            textStyle: ['', '', '', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(255,255,255,1)', '700', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'Text6',
-                            text: '<p style=\"margin: 0px;\">​Opcion 4</p>',
+                            type: 'text',
                             align: 'left',
-                            type: 'text'
+                            id: 'Text6',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​Opcion 4</p>',
+                            rect: ['19px', '9px', '97px', '23px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '152px', '45px']
+                            rect: [null, null, '152px', '45px']
                         }
                     }
                 },
@@ -287,25 +283,24 @@
                 content: {
                     dom: [
                         {
+                            rect: ['0px', '0px', '152px', '45px', 'auto', 'auto'],
                             id: 'opc5',
                             type: 'image',
-                            rect: ['0px', '0px', '152px', '45px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/etiqueta1.png', '0px', '0px']
                         },
                         {
-                            rect: ['21px', '9px', '97px', '28px', 'auto', 'auto'],
-                            textStyle: ['', '', '', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(255,255,255,1)', '700', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'Text7',
-                            text: '<p style=\"margin: 0px;\">​Opcion 5</p>',
+                            type: 'text',
                             align: 'left',
-                            type: 'text'
+                            id: 'Text7',
+                            textStyle: ['', '', '', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​Opcion 5</p>',
+                            rect: ['21px', '9px', '97px', '28px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '152px', '45px']
+                            rect: [null, null, '152px', '45px']
                         }
                     }
                 },
@@ -327,27 +322,26 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '250px', '45px', 'auto', 'auto'],
                             userClass: 'parte3',
-                            id: 'par1',
                             type: 'image',
+                            id: 'par1',
+                            rect: ['0px', '0px', '250px', '45px', 'auto', 'auto'],
                             cursor: 'pointer',
                             fill: ['rgba(0,0,0,0)', 'images/etiqueta2.png', '0px', '0px']
                         },
                         {
-                            rect: ['26px', '11px', '216px', '26px', 'auto', 'auto'],
-                            textStyle: ['', '', '23px', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(82,82,82,1.00)', '700', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'txt1',
-                            text: '<p style=\"margin: 0px;\">​<span style=\"font-size: 16px; font-weight: 400;\">Pareja 1</span></p>',
+                            type: 'text',
                             align: 'left',
-                            type: 'text'
+                            id: 'txt1',
+                            textStyle: ['', '', '23px', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​<span style=\"font-size: 16px; font-weight: 400;\">Pareja 1</span></p>',
+                            rect: ['26px', '11px', '216px', '26px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '250px', '45px']
+                            rect: [null, null, '250px', '45px']
                         }
                     }
                 },
@@ -369,27 +363,26 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '250px', '45px', 'auto', 'auto'],
                             userClass: 'parte3',
-                            id: 'par2',
                             type: 'image',
+                            id: 'par2',
+                            rect: ['0px', '0px', '250px', '45px', 'auto', 'auto'],
                             cursor: 'pointer',
                             fill: ['rgba(0,0,0,0)', 'images/etiqueta2.png', '0px', '0px']
                         },
                         {
-                            rect: ['26px', '10px', '216px', '26px', 'auto', 'auto'],
-                            textStyle: ['', '', '23px', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(82,82,82,1.00)', '700', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'txt2',
-                            text: '<p style=\"margin: 0px;\">​<span style=\"font-size: 16px; font-weight: 400;\">Pareja 2</span></p>',
+                            type: 'text',
                             align: 'left',
-                            type: 'text'
+                            id: 'txt2',
+                            textStyle: ['', '', '23px', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​<span style=\"font-size: 16px; font-weight: 400;\">Pareja 2</span></p>',
+                            rect: ['26px', '10px', '216px', '26px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '250px', '45px']
+                            rect: [null, null, '250px', '45px']
                         }
                     }
                 },
@@ -411,27 +404,26 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '250px', '45px', 'auto', 'auto'],
                             userClass: 'parte3',
-                            id: 'par3',
                             type: 'image',
+                            id: 'par3',
+                            rect: ['0px', '0px', '250px', '45px', 'auto', 'auto'],
                             cursor: 'pointer',
                             fill: ['rgba(0,0,0,0)', 'images/etiqueta2.png', '0px', '0px']
                         },
                         {
-                            rect: ['24px', '8px', '216px', '26px', 'auto', 'auto'],
-                            textStyle: ['', '', '23px', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(82,82,82,1.00)', '700', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'txt3',
-                            text: '<p style=\"margin: 0px;\">​<span style=\"font-size: 16px; font-weight: 400;\">Pareja 2</span></p>',
+                            type: 'text',
                             align: 'left',
-                            type: 'text'
+                            id: 'txt3',
+                            textStyle: ['', '', '23px', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​<span style=\"font-size: 16px; font-weight: 400;\">Pareja 2</span></p>',
+                            rect: ['24px', '8px', '216px', '26px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '250px', '45px']
+                            rect: [null, null, '250px', '45px']
                         }
                     }
                 },
@@ -453,27 +445,26 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '250px', '45px', 'auto', 'auto'],
                             userClass: 'parte3',
-                            id: 'par4',
                             type: 'image',
+                            id: 'par4',
+                            rect: ['0px', '0px', '250px', '45px', 'auto', 'auto'],
                             cursor: 'pointer',
                             fill: ['rgba(0,0,0,0)', 'images/etiqueta2.png', '0px', '0px']
                         },
                         {
-                            rect: ['23px', '10px', '216px', '26px', 'auto', 'auto'],
-                            textStyle: ['', '', '23px', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(82,82,82,1.00)', '700', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'txt4',
-                            text: '<p style=\"margin: 0px;\">​<span style=\"font-size: 16px; font-weight: 400;\">Pareja 2</span></p>',
+                            type: 'text',
                             align: 'left',
-                            type: 'text'
+                            id: 'txt4',
+                            textStyle: ['', '', '23px', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​<span style=\"font-size: 16px; font-weight: 400;\">Pareja 2</span></p>',
+                            rect: ['23px', '10px', '216px', '26px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '250px', '45px']
+                            rect: [null, null, '250px', '45px']
                         }
                     }
                 },
@@ -495,27 +486,26 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '250px', '45px', 'auto', 'auto'],
                             userClass: 'parte3',
-                            id: 'par5',
                             type: 'image',
+                            id: 'par5',
+                            rect: ['0px', '0px', '250px', '45px', 'auto', 'auto'],
                             cursor: 'pointer',
                             fill: ['rgba(0,0,0,0)', 'images/etiqueta2.png', '0px', '0px']
                         },
                         {
-                            rect: ['20px', '10px', '216px', '26px', 'auto', 'auto'],
-                            textStyle: ['', '', '23px', '', 'none'],
                             font: ['source-sans-pro, sans-serif', [24, 'px'], 'rgba(82,82,82,1.00)', '700', 'none', 'normal', 'break-word', 'normal'],
-                            id: 'txt5',
-                            text: '<p style=\"margin: 0px;\">​<span style=\"font-size: 16px; font-weight: 400;\">Pareja 2</span></p>',
+                            type: 'text',
                             align: 'left',
-                            type: 'text'
+                            id: 'txt5',
+                            textStyle: ['', '', '23px', '', 'none'],
+                            text: '<p style=\"margin: 0px;\">​<span style=\"font-size: 16px; font-weight: 400;\">Pareja 2</span></p>',
+                            rect: ['20px', '10px', '216px', '26px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '250px', '45px']
+                            rect: [null, null, '250px', '45px']
                         }
                     }
                 },
@@ -537,40 +527,39 @@
                 content: {
                     dom: [
                         {
+                            rect: ['0px', '0px', '250', '45', 'auto', 'auto'],
                             id: 'obj1_par',
                             symbolName: 'obj1_par',
-                            rect: ['0px', '0px', '250', '45', 'auto', 'auto'],
                             type: 'rect'
                         },
                         {
+                            rect: ['0px', '45px', '250', '45', 'auto', 'auto'],
                             id: 'obj2_par',
                             symbolName: 'obj2_par',
-                            rect: ['0px', '45px', '250', '45', 'auto', 'auto'],
                             type: 'rect'
                         },
                         {
+                            rect: ['2px', '89px', '250', '45', 'auto', 'auto'],
                             id: 'obj3_par',
                             symbolName: 'obj3_par',
-                            rect: ['2px', '89px', '250', '45', 'auto', 'auto'],
                             type: 'rect'
                         },
                         {
+                            rect: ['2px', '134px', '250', '45', 'auto', 'auto'],
                             id: 'obj4_par',
                             symbolName: 'obj4_par',
-                            rect: ['2px', '134px', '250', '45', 'auto', 'auto'],
                             type: 'rect'
                         },
                         {
+                            rect: ['2px', '178px', '250', '45', 'auto', 'auto'],
                             id: 'obj5_par',
                             symbolName: 'obj5_par',
-                            rect: ['2px', '178px', '250', '45', 'auto', 'auto'],
                             type: 'rect'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '252px', '223px']
+                            rect: [null, null, '252px', '223px']
                         }
                     }
                 },
