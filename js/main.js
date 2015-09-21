@@ -40,18 +40,60 @@ function ed_send_data(sym)
                 });
             });
         }        
-    });     
+    });
+
+    if(sym.$("Submit").length>0)
+    {
+        sym.getSymbol("Submit").playReverse("activado");           
+    }
 }
 
 function send_on_change(sym)
 {
     var stage = $(sym.getComposition().getStage().ele);
+    var retorno_datos = {};
+    retorno_datos.user_answer = [];
+    retorno_datos.position_which_is_right = [];
+    var json_content = stage.prop('ed_json_property_object');
+    retorno_datos.attempts_to = stage.prop('ed_user_attempts');
+    retorno_datos.isReady = true;
+
+    if (stage.prop('ed_blocked')) {
+        return;
+    }
+
+    $("ul#list_sort li").each(function(index) {
+        retorno_datos.user_answer[index] = $(this).html();
+        if(index < json_content.words.length)
+        {
+            if ($(this).html() == json_content.words[index].word)
+            {
+                retorno_datos.position_which_is_right[index] = true;
+                retorno_datos.final_stage = "correct";
+            } else {
+                //No debe sumar puntos si su respuesta es incorrecta
+                retorno_datos.position_which_is_right[index] = false;
+                retorno_datos.final_stage = "incorrect";
+            }
+        }
+    });
+
     parent.$(parent.document).trigger(
     {
-        type: "EDGE_Plantilla_on_change",
+        type: "EDGE_Plantilla_onChange",
+        interactionType: "fill-in",
+        json: json_content,
+        isReady: retorno_datos.isReady,
+        answer: retorno_datos.user_answer,
+        results: retorno_datos.final_stage,
+        position_which_is_right: retorno_datos.position_which_is_right,
+        attempts: retorno_datos.attempts_to,
+        attempts_limit: json_content.attempts,
         sym: sym,
         identify: stage.prop("ed_identify")
     });
+    return retorno_datos;
+
 }
 
 $('body').on("EDGE_Plantilla_creationComplete", function(evt)
@@ -81,6 +123,11 @@ $('body').on('EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied', fun
     if (evt.block) {
         //Debe bloquear la actividad
         stage.prop('ed_blocked', true);
+        if(sym.$("Submit").length>0)
+        {
+            sym.getSymbol("Submit").playreverse("desactivado"); 
+        }
+        
         $('#block_it').show();
     }
 
@@ -117,9 +164,9 @@ $('body').on('EDGE_Recurso_sendPreviousData EDGE_Recurso_postSubmitApplied', fun
 function EDGE_Recurso_Submit(sym)
 {
     $('body').trigger({
-            type: 'EDGE_Recurso_Submit',
-            sym: sym
-         });
+        type: 'EDGE_Recurso_Submit',
+        sym: sym
+    });
 }
 
 $('body').on('EDGE_Recurso_Submit', function(evt)
@@ -176,9 +223,3 @@ function do_submit(sym) {
         sym: evt.sym
     });*/
 }
-
-
-
-
-
-

@@ -16,15 +16,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${btn_enviar}", "click", function(sym, e) {
-         // introducir aquí código para clic de ratón // aca va acciones del boton de enviar
-         EDGE_Recurso_Submit(sym);
+      Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
+         // Insertar código para ejecutarse cuando el símbolo se crea aquí         
+         //ed_send_data(sym);
       });
       //Edge binding end
 
-      Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
-         // Insertar código para ejecutarse cuando el símbolo se crea aquí
-         //ed_send_data(sym);
+      Symbol.bindElementAction(compId, symbolName, "${Submit}", "click", function(sym, e) {
+         EDGE_Recurso_Submit(sym);
       });
       //Edge binding end
 
@@ -144,5 +143,27 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
    })("contenedor_padre");
    //Edge symbol end:'contenedor_padre'
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'Submit'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("Submit");
+   //Edge symbol end:'Submit'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-18191759");
